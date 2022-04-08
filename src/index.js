@@ -4,7 +4,8 @@ import './index.css';
 
 function Square(props) {
     return (
-      <button className="square" onClick={props.onClick}>
+      <button 
+      className="square" onClick={props.onClick}>
         {props.value}
       </button>
     );
@@ -93,8 +94,14 @@ function Square(props) {
           'Go to move #' + move :
           'Go to game start';
         return (
-          <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <li  key={move}>
+            <button 
+                onClick={() => {this.jumpTo(move)}}
+                className = "description"
+            >
+            {desc}
+
+            </button>
           </li>
         );
       });
